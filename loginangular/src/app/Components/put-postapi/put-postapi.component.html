@@ -26,7 +26,7 @@
                     <td>{{item.departmentName}}</td>
                     <td>{{item.departmentLogo}}</td>
                     <td><button (click)="onEdit(item)">edit</button>
-                        <button>delete</button></td>
+                        <button (click)="onDelete(item.departmentId)">delete</button></td>
                    
                   </tr>
                  
@@ -46,10 +46,11 @@
           
             <div class="button-class">
             <div>
-              @if(deptuserObj.departmentID ==0){
+              {{deptuserObj|json}}
+              @if(deptuserObj.departmentId==0){
             <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
           }@else{
-          <button  class="btn btn-warning" >Update</button>
+          <button  type="submit" (click)="onUpdate()" class="btn btn-warning" >Update</button>
         }
        </div>
             <button  class="btn btn-danger" >Reset</button>
