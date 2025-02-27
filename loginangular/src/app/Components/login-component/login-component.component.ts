@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { userloginObj } from '../../../model/department';
 @Component({
   selector: 'app-login-component',
   imports: [FormsModule,CommonModule],
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponentComponent {
   
-userList: any[]=[];
+userList: userloginObj[]=[];
 constructor(private http:HttpClient){
 
 }
@@ -18,11 +19,8 @@ constructor(private http:HttpClient){
 loginAlert (message :string){
   alert(message);
 }
- userloginObj: any ={
-  "userName":"",
-  "password":""
+userloginObj:userloginObj=new userloginObj();
 
- }
  htttp =inject(HttpClient);
  onSave(){
   debugger;

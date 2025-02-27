@@ -9,6 +9,16 @@ export class deptuserObj{
         this.departmentLogo="";
         
     }
+}
+export class userloginObj {
+    username:string;
+    password:string;
+    constructor() {
+        this.username="",
+        this.password=""
+        
+    }
+}
 
-
-  }
+  
+ 
