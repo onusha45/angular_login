@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container mt-3">
+        <h2>Borderless Table</h2>
+        <p>The .table-borderless class removes borders from the table:</p>            
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th>srno</th>
+              <th>name</th>
+              <th>city</th>
+              <th>status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of departmentList; track $index) {
+                <tr>
+                    <td>{{$index+1}}</td>
+                    <td>{{item.departmentName}}</td>
+                    <td>{{item.departmentLogo}}</td>
+                    <td><button>edit</button></td>
+                  </tr>
+                 
+            }
+            
+          </tbody>
+        </table>
+        <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label  class="form-label" >Department Name</label>
+              <input  class="form-control" [(ngModel)]="deptuserObj.departmentName" plabceholder="Enter Department name" name="email">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">City</label>
+              <input class="form-control" [(ngModel)]="deptuserObj.departmentLogo" placeholder="Enter password" name="pswd">
+            </div>
+          
+            <div class="button-class">
+            <div>
+            <button type="submit" class="btn btn-primary" (click)="onSave()">Save</button>
+        </div>
+            <div>
+            <button  class="btn btn-danger" >Reset</button>
+        </div>
+    </div>
+          </form>
+          
+      </div>
+</body>
+</html>
