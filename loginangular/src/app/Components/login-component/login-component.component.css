@@ -1,0 +1,17 @@
+.login-form{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 50em;
+}
+.emailBox , .passwordBox{
+    font-weight: bolder;
+    font-size: 1em;
+    text-shadow: 1em;
+    width: 10;
+}
+ .login-btn{
+    background-color: blue;
+    text-align: center;
+    margin-top: 1em;
+ }
