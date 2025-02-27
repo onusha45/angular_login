@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class PutPostapiComponent implements OnInit{
 departmentList : any[]=[];
 deptuserObj:any ={
-  "departmentId":"0",
+  "departmentId":0,
   "departmentName":"",
   "departmentLogo":""
 }
@@ -38,6 +38,10 @@ getDepartment(){
     this.departmentList = res.data;
 
   })
+}
+onEdit(data: any){
+  this.deptuserObj = data;
+
 }
 
 }
